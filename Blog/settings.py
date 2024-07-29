@@ -93,14 +93,13 @@ DATABASES = {
     }
 }
 
-# import dj_database_url
+import dj_database_url
 
-# if 'DATABASE_URL' in os.environ:
-#     DATABASES['default'] = dj_database_url.config(
-#         conn_max_age=500,
-#         conn_health_checks=True,
-#     )
+DATABASE_URL = os.getenv("DATABASE_URL")
 
+DATABASES = {
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
