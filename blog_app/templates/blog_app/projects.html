@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+          crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'blog_app/css/common.css' %}">
+		<link rel="stylesheet" href="{% static 'blog_app/css/projects.css' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Projects</h1>
+			<hr>
+
+      <div class="card-container">
+
+        <div class="col-md-4">
+          <div class="card">
+						<img src="{% static 'blog_app/images/projects_imgs/sfrenderer.png' %}" class="card-img-top" alt="sfrenderer">
+            <div class="card-body">
+              <a href="https://github.com/ishan9299/SFRenderer" target="_blank" class="card-title">SFRenderer</a>
+              <p class="project-description">A software renderer written from scratch. WIP.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+						<img src="{% static 'blog_app/images/projects_imgs/bullet_hell_game.png' %}" class="card-img-top" alt="bullet hell game">
+            <div class="card-body">
+              <a href="https://ishan9299.itch.io/bullet-hell" target="_blank" class="card-title">Bullet Hell Game</a>
+              <p class="project-description">A bullet hell game written using pygame for the bullet hell game jam hosted by itch.io</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card">
+						<img src="{% static 'blog_app/images/projects_imgs/sfmath.png' %}" class="card-img-top" alt="sfmath">
+            <div class="card-body">
+              <a href="https://github.com/ishan9299/sfmath" target="_blank" class="card-title">sfmath</a>
+              <p class="project-description">A math library that contains math functions for graphics programming. wip.</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card">
+            <img src="{% static 'blog_app/images/projects_imgs/cropped-modus-neovim.png' %}" class="card-img-top" alt="Modus Theme">
+            <div class="card-body">
+              <a href="https://github.com/ishan9299/modus-theme-vim" target="_blank" class="card-title">Modus Colorschemes</a>
+              <p class="project-description">A port of a popular emacs theme to neovim re-written in Lua.</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card">
+						<img src="{% static 'blog_app/images/projects_imgs/neovim-solarized.png' %}" class="card-img-top" alt="neovim solarized">
+            <div class="card-body">
+              <a href="https://github.com/ishan9299/nvim-solarized-lua" target="_blank" class="card-title">Neovim Solarized</a>
+              <p class="project-description">A solarized colorscheme ported from vim to neovim re-written in Lua.</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card">
+						<img src="{% static 'blog_app/images/projects_imgs/personal-website.png' %}" class="card-img-top" alt="personal website">
+            <div class="card-body">
+              <a href="https://ishanagarwal.xyz" target="_blank" class="card-title">Personal Website</a>
+              <p class="project-description">My personal website</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card">
+            <img src="{% static 'blog_app/images/projects_imgs/OBJparser.png' %}" class="card-img-top" alt="OBJ parser">
+            <div class="card-body">
+              <a href="https://github.com/ishan9299/Wavefront-Parser" target="_blank" class="card-title">OBJ Parser</a>
+              <p class="project-description">Parses OBJ files and generates static arrays containing vertex data for 3D models. Also used it in my software renderer. WIP.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card">
+            <img src="{% static 'blog_app/images/projects_imgs/ecommerce.jpg' %}" class="card-img-top" alt="Ecommerce Page">
+            <div class="card-body">
+              <a href="https://frontendmentor-ecommerce-site.netlify.app/" target="_blank" class="card-title">E-commerce Page</a>
+              <p class="project-description">This is an e-commerce demo page built for the frontendmetor's challenge.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,19 @@
+:root {
+	--main-bg-color: #FBD8B0;
+	--main-bg-color-codeblk: #FBD8B0;
+	--main-bg-color-codeblk: #FACB80;
+	--main-bg-color-codeblk: #F7F8F8;
+	--main-fg-color: #000000;
+	--main-fg-color-header: #B52B40;
+	--white: #F7F8F8;
+}
+
+body {
+	background-color: var(--main-bg-color);
+	color: var(--main-fg-color);
+}
+
+hr {
+	color: var(--main-fg-color-header);
+	border-color: var(--main-fg-color-header);
+}

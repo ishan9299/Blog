@@ -1,0 +1,69 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	padding: 20px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	color: #b52b40;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.card {
+	margin: 10px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+	padding: 15px;
+}
+
+.card-title {
+	color: var(--main-fg-color-header);
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+.card-title:hover {
+	text-decoration: underline;
+}
+
+.project-description {
+	color: #555;
+	font-size: 1.0rem;
+}
+
+.card-img-top {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+/* Ensure cards stay in a row */
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card-container .col-md-4 {
+	flex: 1 1 30%; /* Adjust the percentage for the desired width */
+}
+

@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link rel="stylesheet"
+			  href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+			  integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+			  crossorigin="anonymous">
+
+		<link rel="stylesheet" href="{% static 'blog_app/css/common.css' %}">
+		<link rel="stylesheet" href="{% static 'blog_app/css/list_articles.css' %}">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<main>
+				<a class="home-btn" href="/">Home</a>
+				<h1>Articles</h1>
+				<hr>
+				<ul>
+					{% for article in articles %}
+					<li>
+						<div>
+							<a class="list-a" href="{% url 'markdown_content' article.1 %}">
+								{{ article.0 }}
+							</a>
+							{{ article.2|date:"m-d-y" }}
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</main>
+		</div>	<!-- <script src="index.js"></script> -->
+	</body>
+</html>
