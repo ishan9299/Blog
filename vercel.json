@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "your_project/wsgi.py",
+      "src": "Blog/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "your_project/wsgi.py"
+      "dest": "Blog/wsgi.py"
     }
   ],
   "buildCommand": "python manage.py collectstatic --noinput"
