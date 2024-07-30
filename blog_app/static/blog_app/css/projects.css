@@ -63,7 +63,20 @@ h1 {
 	justify-content: space-between;
 }
 
-.card-container .col-md-4 {
-	flex: 1 1 30%; /* Adjust the percentage for the desired width */
+@media screen and (min-width: 990px) {
+	.card-container .col-md-4 {
+		flex: 1 1 30%; /* Adjust the percentage for the desired width */
+	}
 }
 
+@media screen and (max-widt: 989px) {
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.card-img-top {
+		width: 480px;
+	}
+}
