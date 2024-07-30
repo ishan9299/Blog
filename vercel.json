@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "Blog/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "zeroConfig": true }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
