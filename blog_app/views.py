@@ -3,7 +3,10 @@ from django.shortcuts import render, get_object_or_404
 from .models import MarkdownContent
 
 def home_page(request):
-    return render(request, "blog_app/home.html")
+    try:
+        return render(request, "blog_app/home.html")
+    except:
+        return HttpResponse(f"Template not found: {e}")
 
 def list_articles(request):
     articles = MarkdownContent.objects.values_list('title', 'slug', 'created')
