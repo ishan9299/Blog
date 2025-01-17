@@ -1,16 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "Blog/wsgi.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "Blog/wsgi.py"
-    }
-  ],
-  "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic"
+    "version": 2,
+    "functions": {
+        "api/*.py": {
+            "runtime": "python3.9"
+        }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "Blog/wsgi.py"
+        }
+    ],
+    "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput"
 }
